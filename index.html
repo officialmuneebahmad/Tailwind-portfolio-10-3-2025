@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muneeb Portfolio</title>
+    <link rel="shortcut icon" href="./icons/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="./animation.js" defer></script>
+</head>
+<body class="flex flex-col justify-center items-center bg-white text-black transition-colors duration-300 dark:bg-gray-900 dark:text-white">
+
+    <nav class="color-class flex flex-row flex-wrap items-center justify-around w-2/4 my-4 py-2 rounded-full shadow-xl sm:flex-row gap-4">
+        <div class="rounded-full hover:bg-slate-200">
+            <a href="#!"><img class="size-16 rounded-full m-1" src="./icons/logo.png" alt="logo"></a>
+        </div>
+        <div class="flex bg-slate-200 rounded-full p-2">
+            <a class="flex flex-row flex-nowrap justify-center items-center align-middle rounded-full bg-slate-900 text-white p-2 mx-1" href="./index.html">
+                <svg class="size-6 mt-[-3px]" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M240-200h147.69v-203.08q0-13.73 9.29-23.02 9.29-9.28 23.02-9.28h120q13.73 0 23.02 9.28 9.29 9.29 9.29 23.02V-200H720v-347.69q0-6.16-2.69-11.16t-7.31-8.84L494.62-730q-6.16-5.38-14.62-5.38-8.46 0-14.62 5.38L250-567.69q-4.62 3.84-7.31 8.84-2.69 5-2.69 11.16V-200Zm-40 0v-347.69q0-15.35 6.87-29.08 6.86-13.73 18.98-22.61l215.38-163.08q16.91-12.92 38.65-12.92t38.89 12.92l215.38 163.08q12.12 8.88 18.98 22.61 6.87 13.73 6.87 29.08V-200q0 16.08-11.96 28.04T720-160H564.62q-13.74 0-23.02-9.29-9.29-9.29-9.29-23.02v-203.07H427.69v203.07q0 13.73-9.29 23.02-9.28 9.29-23.02 9.29H240q-16.08 0-28.04-11.96T200-200Zm280-268.46Z"/></svg>
+                <span class="hidden sm:block leading-none">Home</span>
+            </a>
+            <a class="group flex flex-row flex-nowrap justify-center items-center rounded-full hover:bg-slate-900 hover:text-white p-2 mx-1 transition duration-500" href="./contact.html">
+                <svg class="size-6 group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480.13-120q-74.67 0-140.41-28.34-65.73-28.34-114.36-76.92-48.63-48.58-76.99-114.26Q120-405.19 120-479.87q0-74.67 28.35-140.41 28.35-65.73 76.95-114.36 48.6-48.63 114.3-76.99Q405.3-840 480-840h295.38q27.62 0 46.12 18.5Q840-803 840-775.38V-480q0 74.7-28.34 140.4t-76.92 114.3q-48.58 48.6-114.26 76.95Q554.81-120 480.13-120Zm-.13-40q134 0 227-93t93-227v-295.38q0-10.77-6.92-17.7-6.93-6.92-17.7-6.92H480q-134 0-227 93t-93 227q0 134 93 227t227 93ZM310.77-386.15h240v-80l120 80v-200l-120 80v-80h-240v200ZM480-480Z"/></svg>
+                <span class="hidden sm:block text-black group-hover:text-white">Contact Me</span>
+            </a>
+            <button class="toggle group flex justify-center items-center rounded-full hover:bg-slate-900 hover:text-white p-2 mx-1 transition duration-500 hover:cursor-pointer">
+                <svg class=" size-6 transition duration-500 group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path id="sun-moon" d="M396-396q-32-32-58.5-67T289-537q-5 14-6.5 28.5T281-480q0 83 58 141t141 58q14 0 28.5-2t28.5-6q-39-22-74-48.5T396-396Zm57-56q51 51 114 87.5T702-308q-40 51-98 79.5T481-200q-117 0-198.5-81.5T201-480q0-65 28.5-123t79.5-98q20 72 56.5 135T453-452Zm290 72q-20-5-39.5-11T665-405q8-18 11.5-36.5T680-480q0-83-58.5-141.5T480-680q-20 0-38.5 3.5T405-665q-8-19-13.5-38T381-742q24-9 49-13.5t51-4.5q117 0 198.5 81.5T761-480q0 26-4.5 51T743-380ZM440-840v-120h80v120h-80Zm0 840v-120h80V0h-80Zm323-706-57-57 85-84 57 56-85 85ZM169-113l-57-56 85-85 57 57-85 84Zm671-327v-80h120v80H840ZM0-440v-80h120v80H0Zm791 328-85-85 57-57 84 85-56 57ZM197-706l-84-85 56-57 85 85-57 57Zm199 310Z"/>
+                </svg>
+            </button>            
+        </div>
+    </nav>
+
+    <h1 class="text-2xl sm:text-4xl font-bold text-center my-20">
+        <strong id="typed"></strong>
+    </h1>
+
+    <main class="flex flex-col justify-center items-center w-2/4">
+
+        <div>
+            <img class="size-44" src="./icons/undraw_designer_0ogx.svg" alt="designer illustration">
+        </div>
+
+        <hr class="w-full my-16">
+
+        <div class="text-center mb-20 w-full">
+            <h1 class="text-3xl">Take a glance at my work!</h1>
+        </div>
+
+        <!-- App Designs -->
+
+        <div class=" w-full flex flex-row flex-nowrap justify-center items-center rounded-full bg-slate-900 ">
+            <p class="flex justify-evenly items-center max-w-max text-2xl text-white font-bold p-4 m-2">
+                App Designs </p>
+        </div>
+
+        <div class="relative w-full max-w-4xl mx-auto animate-on-scroll" data-animation="animate__slideInLeft">
+            <!-- Scrollable Container with Hidden Scrollbar -->
+            <div id="scroll-container" class="flex overflow-x-auto scroll-smooth whitespace-nowrap no-scrollbar">
+                <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl p-2 my-4 mx-4 hover:scale-105 hover:transition duration-200 min-w-[200px]" href="#!">
+                    <img class="md:max-w-40" src="https://i.postimg.cc/L8TPrKwd/curesync.png" alt="Cure Sync App">
+                    <p class="font-bold my-4">Cure Sync</p>
+                </a>
+                <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl p-2 my-4 mx-4 hover:scale-105 hover:transition duration-200 min-w-[200px]" href="#!">
+                    <img class="md:max-w-40" src="https://i.postimg.cc/wMCZQ1LD/i-Phone-13-mini-68.png" alt="illustration pic">
+                    <p class="font-bold my-4">Headway</p>
+                </a>
+                <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl p-2 my-4 mx-4 hover:scale-105 hover:transition duration-200 min-w-[200px]" href="#!">
+                    <img class="md:max-w-40" src="https://i.postimg.cc/9QhFWMK4/i-Phone-13-mini-40.png" alt="illustration pic">
+                    <p class="font-bold my-4">Mr & Mrs</p>
+                </a>
+                <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl p-2 my-4 mx-4 hover:scale-105 hover:transition duration-200 min-w-[200px]" href="#!">
+                    <img class="md:max-w-40" src="https://i.postimg.cc/6pc7gnq6/i-Phone-13-mini-106.png" alt="illustration pic">
+                    <p class="font-bold my-4">Traveler.com</p>
+                </a>
+            </div>
+
+            <!-- Left Arrow -->
+            <button id="scroll-left" class="absolute top-1/2 left-0 transform -translate-y-1/2 shadow-lg rounded-full p-2 hover:cursor-pointer bg-blue-500 hover:bg-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m313-440 196 196q12 12 11.5 28T508-188q-12 11-28 11.5T452-188L188-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l264-264q11-11 27.5-11t28.5 11q12 12 12 28.5T508-715L313-520h447q17 0 28.5 11.5T800-480q0 17-11.5 28.5T760-440H313Z"/></svg>
+            </button>
+           
+        
+            <!-- Right Arrow -->
+            <button id="scroll-right" class="absolute top-1/2 right-0 transform -translate-y-1/2 shadow-lg rounded-full p-2 hover:cursor-pointer bg-blue-500 hover:bg-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M647-440H200q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520h447L451-716q-12-12-11.5-28t12.5-28q12-11 28-11.5t28 11.5l264 264q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L508-188q-11 11-27.5 11T452-188q-12-12-12-28.5t12-28.5l195-195Z"/></svg>
+            </button>
+        </div>
+
+       <!-- Web Designs Section -->
+
+<div class="relative w-full max-w-5xl mx-auto mt-20">
+    <!-- Section Title -->
+    <div class="flex justify-center items-center rounded-full bg-slate-900">
+        <p class="text-2xl text-white font-bold p-4">Web Designs</p>
+    </div>
+
+    <!-- Scrollable Container -->
+    <div id="web-scroll" class="flex overflow-x-auto scroll-smooth whitespace-nowrap no-scrollbar px-12 mt-8">
+        <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl my-4 mx-2 hover:scale-105 hover:transition duration-200 min-w-[420px] h-[320px]" href="#!">
+            <img class="w-full h-48 object-cover rounded-lg" src="https://i.postimg.cc/RZrZKT6V/Screenshot-2025-03-10-122534.png" alt="illustration pic">
+            <p class="font-bold mt-8">MonoSpace</p>
+        </a>        
+                
+        <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl my-4 mx-2 hover:scale-105 hover:transition duration-200 min-w-[420px] h-[320px]" href="#!">
+            <img class="w-full h-48 object-cover rounded-lg" src="https://i.postimg.cc/3J0wkqwc/Screenshot-2025-03-05-174640.png" alt="illustration pic">
+            <p class="font-bold mt-8">AltSpace</p>
+        </a>
+        
+        <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl my-4 mx-2 hover:scale-105 hover:transition duration-200 min-w-[420px] h-[320px]" href="#!">
+            <img class="w-full h-48 object-cover rounded-lg" src="https://i.postimg.cc/g2vkD68y/Screenshot-2025-03-10-122447.png" alt="illustration pic">
+            <p class="font-bold mt-8">ClearVista</p>
+        </a>        
+    </div>
+
+        <!-- Left Arrow -->
+        <button id="web-left" class="absolute top-1/2 left-0 transform -translate-y-1/2 shadow-lg rounded-full p-2 bg-blue-500 hover:bg-blue-700">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                <path d="m313-440 196 196q12 12 11.5 28T508-188q-12 11-28 11.5T452-188L188-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l264-264q11-11 27.5-11t28.5 11q12 12 12 28.5T508-715L313-520h447q17 0 28.5 11.5T800-480q0 17-11.5 28.5T760-440H313Z"/>
+            </svg>
+        </button>
+
+    <!-- Right Arrow -->
+    <button id="web-right" class="absolute top-1/2 right-0 transform -translate-y-1/2 shadow-lg rounded-full p-2 bg-blue-500 hover:bg-blue-700">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+            <path d="M647-520H200q-17 0-28.5-11.5T160-560q0-17 11.5-28.5T200-600h447L452-795q-12-12-12-28.5t12-28.5q12-12 28.5-12t28.5 12l264 264q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L509-188q-12 12-28.5 11.5T452-188q-12-12-12-28.5t12-28.5l195-195Z"/>
+        </svg>
+    </button>
+    </div>
+
+
+        <!-- Other Work -->
+
+         <div class=" w-full flex flex-row flex-nowrap justify-center items-center rounded-full bg-slate-900 mt-20">
+            <p class="flex flex-wrap text-center justify-evenly items-center max-w-max text-2xl text-white font-bold p-4 m-2">
+                Other Work (Updated Soon)</p>
+        </div>
+        <div class="md:flex-row md:flex-wrap flex flex-col flex-nowrap justify-center items-center">
+            <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 hover:scale-105 hover:transition duration-200" href="#!">
+                <img class="md:max-w-40" src="./icons/undraw_coding_joxb.svg" alt="illustration pic">
+                <p class="font-bold my-4">Programming</p>
+            </a>
+            <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 hover:scale-105 hover:transition duration-200" href="#!">
+                <img class="md:max-w-40" src="./icons/undraw_coding_joxb.svg" alt="illustration pic">
+                <p class="font-bold my-4">Programming</p>
+            </a>
+            <a class="color-class flex flex-col justify-center items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 hover:scale-105 hover:transition duration-200" href="#!">
+                <img class="md:max-w-40" src="./icons/undraw_coding_joxb.svg" alt="illustration pic">
+                <p class="font-bold my-4">Programming</p>
+            </a>
+        </div>
+
+         <!-- Tools & Techs -->
+
+         <div class=" w-full flex flex-row flex-nowrap justify-center items-center rounded-full bg-slate-900 mt-20">
+            <p class="text-center flex justify-evenly items-center max-w-max text-2xl text-white font-bold p-4 m-2">
+                Tools & Tech I know & work with </p>
+        </div>
+
+        <div class="md:w-full flex flex-col flex-nowrap justify-center items-center">
+
+            <!-- HTML -->
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/html.png" alt="png pic">
+                    <h1 class="font-bold my-4 md:text-2xl text-sm">HTML</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-green-500 h-4 rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-green-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="25.1"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">90%</span>
+                </div>
+            </a>
+
+            <!-- CSS -->
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/css.png" alt="png pic">
+                    <h1 class="font-bold my-4 md:text-2xl text-sm">CSS</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">80%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-green-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="50.24"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">80%</span>
+                </div>
+
+            </a>
+
+            <!-- JS -->
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/js.png" alt="png pic">
+                    <h1 class="font-bold my-4 md:text-2xl text-sm">JS</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">50%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-orange-500 h-4 rounded-full" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-orange-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="125.6"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">50%</span>
+                </div>
+            </a>
+
+            <!-- Tailwind -->
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/tailwind.png" alt="png pic">
+                    <h1 class="font-bold my-4 md:text-2xl text-sm">Tailwindcss</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">70%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-orange-500 h-4 rounded-full" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-orange-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="75.36"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">70%</span>
+                </div>
+
+            </a>
+
+            <!-- Bulma -->
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/bulma.png" alt="png pic">
+                    <h1 class="font-bold my-4 md:text-2xl text-sm">Bulmacss</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">70%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-orange-500 h-4 rounded-full" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-orange-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="75.36"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">70%</span>
+                </div>
+
+            </a>
+
+            <!-- Figma -->
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/figma.png" alt="png pic">
+                    <h1 class="font-bold my-4 md:text-2xl text-sm">Figma</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">50%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-orange-500 h-4 rounded-full" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-orange-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="125.6"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">50%</span>
+                </div>
+
+            </a>
+
+            <!-- Adobe Illustrator -->
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/illustrator.png" alt="png pic">
+                    <h1 class="font-bold text-center my-4 md:text-2xl text-sm">Adobe Illustrator</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">60%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-orange-500 h-4 rounded-full" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-orange-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="100.48"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">60%</span>
+                </div>
+
+            </a>
+
+            <!-- C Language -->
+            
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/c.png" alt="png pic">
+                    <h1 class="font-bold text-center my-4 md:text-2xl text-sm">C Language</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-green-500 h-4 rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-green-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="25.1"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">90%</span>
+                </div>
+            </a>
+
+
+            <!-- C++ Language-->
+
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/cpp.png" alt="png pic">
+                    <h1 class="font-bold text-center my-4 md:text-2xl text-sm">C++ Language</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">50%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-orange-500 h-4 rounded-full" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-orange-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="125.6"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">50%</span>
+                </div>
+            </a>
+
+            <!-- Python -->
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/py.png" alt="png pic">
+                    <h1 class="font-bold my-4 md:text-2xl text-sm">Python</h1>
+                    <h1 class="extra-txt my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">50%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-orange-500 h-4 rounded-full" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-orange-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="125.6"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">50%</span>
+                </div>
+            </a>
+
+            <!-- MS Excel -->
+
+            <a class="color-class md:w-full w-full flex flex-col md:flex-row justify-evenly items-center rounded-2xl shadow-2xl p-8 my-4 mx-2 border border-white hover:border-blue-700 hover:scale-105 hover:transition duration-200" href="#!">
+
+                <div class="flex flex-col justify-center items-center">
+                    <img class="md:max-w-20 max-w-10" src="./icons/excel.png" alt="png pic">
+                    <h1 class="font-bold text-center my-4 md:text-2xl text-sm">MS Excel</h1>
+                    <h1 class="my-2 md:hidden">Concept Cleared</h1>
+                </div>
+
+                <!-- Horizontal Progress -->
+
+                <div class="md:w-full ml-4 md:flex flex-row hidden">
+                    <div class="w-full max-w-md mx-auto p-4 ">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="extra-txt text-sm font-medium text-gray-700">Concept Cleared</span>
+                            <span class="extra-txt text-sm font-medium text-gray-700">80%</span>
+                        </div>
+                        <div class="w-full bg-gray-300 rounded-full h-4">
+                            <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
+                        </div>
+                        <div class="border rounded-full w-fit flex my-2 px-2 bg-yellow-100 border-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E6B800"><path d="M460-200v-150.15q-55.15-4.08-95.96-39.97-40.81-35.88-51.12-90.34-63.46-7.46-108.19-52.04T160-640v-15.38q0-26.66 18.98-45.64T224.62-720h81.53v-15.38q0-26.66 18.98-45.64Q344.12-800 370.77-800h218.46q26.65 0 45.64 18.98 18.98 18.98 18.98 45.64V-720h81.53q26.66 0 45.64 18.98T800-655.38V-640q0 62.92-44.73 107.5t-108.19 52.04q-10.31 54.46-51.12 90.34-40.81 35.89-95.96 39.97V-200h104.62q8.5 0 14.25 5.76t5.75 14.27q0 8.51-5.75 14.24T604.62-160H355.38q-8.5 0-14.25-5.76t-5.75-14.27q0-8.51 5.75-14.24t14.25-5.73H460ZM306.15-523.38V-680h-81.53q-10.77 0-17.7 6.92-6.92 6.93-6.92 17.7V-640q0 44.92 30.46 78.12 30.46 33.19 75.69 38.5Zm174.03 134.15q55.2 0 93.67-38.59 38.46-38.59 38.46-93.72v-213.84q0-10.77-6.93-17.7-6.92-6.92-17.69-6.92H372.31q-10.77 0-17.69 6.92-6.93 6.93-6.93 17.7v213.84q0 55.13 38.64 93.72 38.65 38.59 93.85 38.59Zm173.67-134.15q45.23-5.31 75.69-38.5Q760-595.08 760-640v-15.38q0-10.77-6.92-17.7-6.93-6.92-17.7-6.92h-81.53v156.62ZM480-574.62Z"/></svg>
+                            <p class="text-yellow-500">Diploma Certified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cicular Progress -->
+
+                <div class="flex flex-col items-center space-y-2 md:hidden">
+                    <svg class="md:w-20 md:h-20 w-10 h-10 transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"/>
+                        
+                        <!-- Progress Circle -->
+                        <circle class="text-green-500 stroke-current" cx="50" cy="50" r="40" stroke-width="10" fill="transparent"
+                            stroke-dasharray="251.2" stroke-dashoffset="50.24"/>
+                    </svg>
+                    <span class="extra-txt text-lg font-bold text-gray-700">80%</span>
+                </div>
+
+            </a>
+            <!-- Section End -->
+        </div>
+
+        <hr class="w-full my-8">
+
+        <!-- Download Resume -->
+
+        <div class="w-full flex flex-col md:flex-row flex-wrap justify-center items-center md:justify-around md:items-center my-8 gap-8">
+            <p class="text-center flex bg-slate-900 rounded-full w-full justify-evenly items-center text-2xl text-white font-bold p-4 m-2">
+                Download My Resume </p>
+            <img class="size-40" src="./icons/undraw_resume_jrgi.svg" alt="resume illustration">
+
+            <a class="flex p-2 rounded-lg hover:shadow text-slate-200 bg-blue-500 hover:bg-blue-700 hover:text-white transition duration-300 group" href="#!" title="Download Resume">
+                <svg class="group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e2e8f0"><path d="M220-160q-8.5 0-14.25-5.76T200-180.03q0-8.51 5.75-14.24T220-200h520q8.5 0 14.25 5.76t5.75 14.27q0 8.51-5.75 14.24T740-160H220Zm259.9-160.85q-6.36 0-11.82-2.11-5.46-2.12-10.7-7.35L321.85-465.85q-5.62-5.61-6-13.77-.39-8.15 6-14.53 6.38-6.39 14.15-6.39 7.77 0 14.15 6.39L460-384.31V-780q0-8.5 5.76-14.25t14.27-5.75q8.51 0 14.24 5.75T500-780v395.69l109.85-109.84q5.61-5.62 13.77-6 8.15-.39 14.53 6 6.39 6.38 6.39 14.15 0 7.77-6.39 14.15L502.62-330.31q-5.24 5.23-10.8 7.35-5.56 2.11-11.92 2.11Z"/></svg>
+                Download Resume
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="flex flex-col md:flex-row justify-around items-center bg-slate-100 w-full h-auto my-8 py-4">
+        <div class="footer-text flex flex-row justify-center items-center text-xl font-semibold">
+                Send me an Email 😊
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M682.92-460H220q-8.54 0-14.27-5.73T200-480q0-8.54 5.73-14.27T220-500h462.92L533.54-649.38q-5.85-5.85-6.12-13.77-.27-7.93 6.12-14.54 6.61-6.62 14.27-6.73 7.65-.12 14.27 6.5l175.3 175.3q5.24 5.24 7.35 10.7 2.12 5.46 2.12 11.92t-2.12 11.92q-2.11 5.46-7.35 10.7l-175.3 175.3q-5.85 5.85-13.89 6.12-8.04.27-14.65-6.35-6.39-6.61-6.5-14.15-.12-7.54 6.5-14.16L682.92-460Z"/></svg>
+                <a href="mailto:officialmuneebahmed@gmail.com" class=" group hover:bg-blue-700 transition duration-300 rounded-lg mx-4 p-1">
+                    <svg class="group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M184.62-200q-27.62 0-46.12-18.5Q120-237 120-264.62v-430.76q0-27.62 18.5-46.12Q157-760 184.62-760h590.76q27.62 0 46.12 18.5Q840-723 840-695.38v430.76q0 27.62-18.5 46.12Q803-200 775.38-200H184.62ZM800-684.62 497.92-486.85q-4.23 2.23-8.57 3.73-4.35 1.5-9.35 1.5t-9.35-1.5q-4.34-1.5-8.57-3.73L160-684.62v420q0 10.77 6.92 17.7 6.93 6.92 17.7 6.92h590.76q10.77 0 17.7-6.92 6.92-6.93 6.92-17.7v-420ZM480-520l307.69-200H172.31L480-520ZM160-684.62v8.47-32.47 1.39V-720v12.77-2.04 33.12-8.47V-240v-444.62Z"/></svg>
+                </a>
+        </div>
+
+    <!-- Back to top up btn -->
+
+<button id="backToTop" onclick="scrollToTop()" 
+class="fixed bottom-6 right-6 hover:cursor-pointer bg-blue-500 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition duration-300 opacity-0 pointer-events-none">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 15l7-7 7 7"></path>
+</svg>
+</button>
+
+    <div>
+        <p class="footer-text my-4">
+            &copy; muneebdesigns.site All Rights Reserved
+        </p>
+    </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./script.js"></script>
+    <script src="./dark-mode.js"></script>
+      
+</body>
+</html>
