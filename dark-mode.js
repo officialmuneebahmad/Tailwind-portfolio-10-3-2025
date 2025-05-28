@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     this.style.borderColor = "#1b1b1b"; // Reset border color when not hovered
                 });
 
+
             }
             for (var i = 0; i < footerTxt.length; i++) {
                 footerTxt[i].style.color = "#131314";
@@ -36,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.color = '#000000';
             for (var i = 0; i < anchor.length; i++) {
                 anchor[i].style.backgroundColor = "#ffffff";
+            }
+
+            for (var i = 0; i < extraTxt.length; i++) {
+                extraTxt[i].style.color = "#222222";
             }
             // sunMoon.setAttribute('fill', 'white');
         }
