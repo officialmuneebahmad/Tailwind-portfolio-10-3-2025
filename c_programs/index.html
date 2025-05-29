@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> C Programs </title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body class="bg-[#fafafa]">
+
+  <div class="w-full box">
+      <h1 class="w-full outline-0 border-0 bg-blue-600 text-center text-4xl font-bold mb-10 py-4 text-[#fafafa] max-sm:text-2xl max-sm:font-semibold">&lt; / Popular C Programs &gt;</h1>
+  </div>
+  
+  <div class="text-center">
+    <i class="fa-solid fa-triangle-exclamation"></i> 
+    Testing Phase
+  </div>
+    
+<div id="programs" class="flex flex-col justify-center items-center flex-wrap my-20 py-20 px-1/4 border w-full">
+
+  <!-- Program # 1 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse ">
+          <span>Determine alphabet or number</span>
+          <span>Program # 1</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">To determine whether an input value is an alphabet or number  
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer" onclick="toggleFAQ(1)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq1">
+              <code>
+  // Check if Character is an Alphabet or not
+
+  #include &lt;stdio.h&gt;
+  int main() {
+    // 65 - 90 A - Z ----- ASCII CODES 
+    // 97 - 122 a - z
+    // 48 - 57 0 - 9 
+    char a;
+    printf("Please Enter a character : \n");
+    scanf("%c",&a);
+    
+    if((a >= 65 && a <= 90) || (a >= 97 && a<= 122))   
+    {
+      printf("It's an alphabet! \n");
+    }
+    else if(a >= 48 && a <= 57){
+      printf("It's a number! \n");
+    }
+    else{
+      printf("Error! \n");
+    }
+    
+    return 0;
+  }
+              </code>
+          </pre>
+      </div>
+
+ <!-- ======================================================== -->
+
+   <!-- Program # 2 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105">
+          <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse max-sm:text-center">
+            <span>Calculate the area of triangle and square</span>
+            <span>Program # 2</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">Calculating the area of triangle and square by taking input value based on the user choice.
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(2)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq2">
+              <code>
+  // Find Area of Triangle & Square
+
+  #include &lt;stdio.h&gt;
+  #include &lt;math.h&gt;
+  int main(){
+    // S, s OR T, t
+    char input;
+    float areaOfSquare, areaOfTriangle, s, b, h;
+    printf("Choose to Calculate the Area of : \n");
+    printf("(S) for Square : ");
+    printf("(T) for Triangle : ");
+    scanf("%c",&input);
+    
+    if(input == 83 || input == 115){
+      printf("Enter value of s : ");
+      scanf("%f",&s); 
+      areaOfSquare = pow(s,2);
+      printf("Area of Square is %.2f : ",areaOfSquare);
+    }
+    else if(input == 84 || input == 116){
+      printf("Enter value of height : ");
+      scanf("%f",&h); 
+      printf("Enter value of base : ");
+      scanf("%f",&b); 
+      areaOfTriangle = 0.5 * b * h;
+      printf("Area of Triangle is %.2f : ",areaOfTriangle);   
+    }
+    else{
+      printf("Error");
+    }
+    return 0;
+  }
+              </code>
+          </pre>
+      </div>
+
+    <!-- ============================================================ -->
+
+      <!-- Program # 3 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Printing A - Z alphabets</span>
+          <span>Program # 3</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">Simply printing A - Z alphabets
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(3)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq3">
+              <code>
+  //Display Characters from A to Z Using Loop   
+
+  #include &lt;stdio.h&gt;
+  int main() {
+    
+    // ASCII will be helpful here
+    char a = 65;
+    for(; a <= 90; a++){
+      printf("%c \t",a);
+    }
+    
+    return 0;	
+  }
+              </code>
+          </pre>
+      </div>
+
+ <!-- ======================================================== -->
+
+      <!-- Program # 4 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Generate multiplication table</span>
+          <span>Program # 4</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          The aim is to print a multiplication table based on the integer value given by the user
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(4)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq4">
+              <code>
+  //Displaying multiplication table  
+
+  #include &lt;stdio.h&gt;
+  int main() {
+    int n;
+    printf("Enter a positive integer : ");  
+    scanf("%d",&n);
+    
+    for(int i = 1; i <= 10; i++){
+      printf("%d x %d = %d\n",n,i,n*i);
+    }
+
+    return 0;	
+}
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 5 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Check Even / Odd number</span>
+          <span>Program # 5</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Check if the given value is Even or Odd 
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(5)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq5">
+              <code>
+  // Determining Even / Odd Numbers
+
+  #include <stdio.h>
+  int main(){
+    
+    int num;
+    
+    printf("Enter any Number : \n");
+    scanf("%d",&num);
+    
+    if(num % 2 == 0 && num != 0){
+      printf("It's an Even Number! \n");
+    }
+    else if(num % 2 == 1){
+      printf("It's an Odd Number! \n");
+    }
+    else{
+      printf("I think you entered Zero! \n");  
+    }
+    
+    return 0;
+  }
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 6 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Find factorial of a number</span>
+          <span>Program # 6</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Finding the factorial of a number entered by the user
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(6)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq6">
+              <code>
+ // Find the Factorial of a number 
+
+  #include <stdio.h>
+  int main() {
+      int n, i;
+      unsigned long long fact = 1;
+      printf("Enter an integer: ");
+      scanf("%d", &n);
+
+      if (n < 0)
+          printf("Error! Factorial of a negative number doesn't exist.");  
+      else {
+          for (i = 1; i <= n; i++) {
+              fact *= i;
+          }
+          printf("Factorial of %d = %llu", n, fact);
+      }
+
+      return 0;
+  }
+
+              </code>
+          </pre>
+      </div>
+
+      <!-- ======================================================== -->
+
+      <!-- Program # 7 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Find factors of a number</span>
+          <span>Program # 7</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Finding the factors of a number given by the user
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(7)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq7">
+              <code>
+  // Factors of a Number
+  #include <stdio.h>
+  int main() {
+    
+    int n;
+    
+    printf("Enter a number to find factors of : ");  
+    scanf("%d",&n);
+    
+    for(int i = 1; i <= n; i++){
+      if(n % i == 0){
+        printf(" %d \t",i);
+      }
+    }
+
+    getch();
+    return 0;
+}
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 8 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Finding remainder</span>
+          <span>Program # 8</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Finding remainder and qoutient by taking values from the user
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(8)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq8">
+              <code>
+ // Finding Remainder & Quotient
+
+  #include <stdio.h>
+  int main(){
+    int divisor, dividend, remainder, quotient;
+    
+    printf("Enter a dividend: \n");
+    scanf("%d", &dividend);
+    
+    printf("\n");
+
+    printf("Enter a divisor: \n");
+    scanf("%d", &divisor);
+    
+    remainder = dividend % divisor;
+    quotient = dividend / divisor;
+    
+    printf("Remainder is : %d \n Quotient is : %d",remainder, quotient);   
+    
+    return 0;
+  }
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 9 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Finding size of datatypes</span>
+          <span>Program # 9</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Finding sizes of different data types at once.
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(9)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq9">
+              <code>
+  // Find the Size of int, float, double and char
+
+  #include <stdio.h>
+  #include <stddef.h>
+  int main() {
+    
+    printf("Size of int is : %zu bytes \n",sizeof(int));
+    printf("Size of float is : %zu bytes \n",sizeof(float));
+    printf("Size of double is : %zu bytes \n",sizeof(double));
+    printf("Size of char is : %zu bytes \n",sizeof(char));
+    
+    return 0;
+  }
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 10 -->
+      <div class="program-block flex flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Finding the largest number</span>
+          <span>Program # 10</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Finding the largest number among three entered number
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(10)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq10">
+              <code>
+ // Finding the largest number among 3 numbers
+
+  #include <stdio.h>
+  int main() {
+    
+    int a, b, c;
+    
+    printf("Enter First Number : \n");
+    scanf("%d",&a);
+    
+    printf("Enter Second Number : \n");
+    scanf("%d",&b);
+    
+    printf("Enter Third Number : \n");
+    scanf("%d",&c);
+    
+    if(a > b && a > c){
+      printf("%d is the largest Number! \n",a);  
+    }
+    else if(b > a && b > c){
+      printf("%d is the largest Number! \n",b);
+    }
+    else if(c > a && c > b){
+      printf("%d is the largest Number! \n",c);
+    }
+    else {
+      printf("Error \n");
+    }
+    
+    return 0;
+  }
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 11 -->
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Finding leap year</span>
+          <span>Program # 11</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Finding the leap year which comes every 4th year . Let's found out how ?
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(11)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq11">
+              <code>
+  // Leap Year Program
+
+   #include <stdio.h>
+   int main(){
+	int year;
+	
+	printf("Enter a year: ");
+	scanf("%d",&year);
+	
+	// YEAR SHOULD BE DIVIDED BY 4 AND 400 , NOT BY 100
+	
+	if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)){
+		printf("Leap Year \n");
+	} 
+	else {
+		printf("Not Leap Year \n");
+	}
+	
+	return 0;
+}
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 12 -->
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Display series of odd numbers</span>
+          <span>Program # 12</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          The aim is to display a series of odd number to a given number
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(12)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq12">
+              <code>
+  // Printing odd numbers using loop
+
+  #include <stdio.h>
+  int main(){
+	
+	int odd_numbers = 17;
+	
+	for(int i = 1; i <= odd_numbers; i+=2){
+		printf("%d \t",i);
+	}
+	
+	return 0;
+}
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 13 -->
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Positive, negative or zero</span>
+          <span>Program # 13</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Determining whether a number is positive , negative or zero
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(13)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq13">
+              <code>
+ 	// Positive , Negative OR Zero Number
+
+  #include <stdio.h>
+  int main() 
+{
+	int n;
+	
+	printf("Please enter a number : \n");
+	scanf("%d",&n);
+	
+	if(n < 0){
+		printf("Negative");
+	}
+	else if(n > 0){
+		printf("Positive");
+	}
+	else{
+		printf("Zero");
+	}
+	
+	
+}
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 14 -->
+
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Prime numbers between two integers</span>
+          <span>Program # 14</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          By using a loop we will print a series of prime numbers, the initial value and ending value is determined (or entered) by the user
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(14)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq14">
+              <code>
+	// Prime Numbers Between two intervals
+  #include <stdio.h>
+  #include <math.h>
+
+  int main() {
+    int n1, n2, i, j, isPrime;
+
+    printf("Enter starting number: ");
+    scanf("%d", &n1);
+
+    printf("Enter ending number: ");
+    scanf("%d", &n2);
+
+    if (n1 < 2) // To Check if n1(initial number) is less than 2. (We do not count 1 OK)
+    
+    n1 = 2;  // If YES start taking Prime numbers from 2
+    printf("Prime numbers between %d and %d are:\n", n1, n2);
+    
+    for (i = n1; i <= n2; i++) {
+        isPrime = 1;  // Assume i is prime. If i isPrime then apply condition below
+
+        for (j = 2; j <= sqrt(i); j++) {		// <= Here i is all Prime numbers OK.
+            if (i % j == 0) {
+                isPrime = 0;  // If i is not prime then break the loop 
+                break;
+            }
+        }
+
+        if (isPrime) {  // If isPrime is true print all Prime numbers
+            printf("%d ", i);
+        }
+    }
+
+    printf("\n");
+    
+    getch();
+    return 0;
+}
+
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 15 -->
+
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Prime number or not</span>
+          <span>Program # 15</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Finding out that an entered value is a prime number or not , the logic is tricky but once figured out, it will be a piece of cake
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(15)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq15">
+              <code>
+// Prime or Not
+
+ #include <stdio.h>
+ #include <math.h>
+ int main() {
+    int n, i, isPrime = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n <= 1) {
+        isPrime = 0;  // 0 and 1 are not prime
+    } else {
+        for (i = 2; i <= sqrt(n); i++) {
+            if (n % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+    }
+
+    if (isPrime)
+        printf("%d is a prime number.", n);
+    else
+        printf("%d is not a prime number.", n);
+
+    return 0;
+}
+
+
+
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 16 -->
+
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Reverse a given number</span>
+          <span>Program # 16</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Reversing a given number, you can use a calculator to figure out each computation
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(16)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq16">
+              <code>
+// Reverse a Number
+
+ #include <stdio.h>
+ int main(){
+	
+	int rev = 0, num = 123;
+	
+	while (num != 0) {
+    int digit = num % 10;        
+    rev = rev * 10 + digit;       
+    num = num / 10;               
+	}
+	
+	printf("%d",rev);
+	
+	return 0;
+}
+
+
+
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 17 -->
+
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Building a calculator using switch</span>
+          <span>Program # 17</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          A calculator can be built in many ways, a simple calculator is built using switch conditional statements
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(17)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq17">
+              <code>
+// Simple Calculator Using switch...case
+
+ #include <stdio.h>
+ int main() {
+	
+	int n1, n2, op;
+	
+	printf("Enter first number : ");
+	scanf("%d",&n1);
+	
+	printf("Enter second number : ");
+	scanf("%d",&n2);
+	
+	printf("Choose Operation is be performed : \n");   
+	printf("1) Division ( / ) \n");
+	printf("2) Multiply ( x ) \n");
+	printf("3) Addition ( + ) \n");
+	printf("4) Subtraction ( - ) \n");
+	
+	scanf("%d",&op);
+	
+	switch (op){
+		case 1 :
+			printf("%d / %d = %d",n1,n2,n1/n2);
+		break;
+	
+		case 2 :
+			printf("%d x %d = %d",n1,n2,n1*n2);
+		break;	
+	
+		case 3 :
+			printf("%d + %d = %d",n1,n2,n1+n2);
+		break;
+	
+		case 4 :
+			printf("%d - %d = %d",n1,n2,n1-n2);
+		break;
+		
+		default :
+			printf("Error ");
+	
+	}
+	getch();
+	return 0;
+}
+
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 18 -->
+
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Sum & Product of series of even numbers </span>
+          <span>Program # 18</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Displaying sum and product of even number series using loop, the logic is almost same  for both.
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(18)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq18">
+              <code>
+// Sum & Product of first ten Even Numbers
+
+ #include <stdio.h>
+
+ int main(){
+	int even_num = 10, sum = 0, pro = 1;
+	
+	// SUM Logic
+	for(int i = 2; i <= even_num; i = i+2){
+		printf("%d \t",i);
+		sum = i + sum;
+	}
+	
+	printf("\n Sum of even numbers : %d \n",sum);
+	
+	// PRODUCT Logic
+		for(int j = 2; j <= even_num; j = j+2){
+		printf("%d \t",j);
+		pro = j * pro;
+	}
+	
+	printf("\n Product of even numbers : %d",pro);
+	
+	return 0;
+}
+
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 19 -->
+
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Finding sum of natural numbers </span>
+          <span>Program # 19</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Displaying sum of natural numbers using loop, copy the code and modify it according to you needs
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(19)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq19">
+              <code>
+ // Calculate the sum of natural numbers
+
+ #include <stdio.h>
+ int main() {
+	
+	int sum;
+	for(int i=1; i <= 10; i++){\
+		sum = i + sum;
+	}
+	printf("The SUM of Natural Numbers from 1 - 10 is : %d \n",sum);
+	
+	return 0;
+}
+
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 20 -->
+
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Swaping two integers </span>
+          <span>Program # 20</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Interchanging the values of two variables using simple logic
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(20)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq20">
+              <code>
+  // Swaping Two Numbers
+
+ #include <stdio.h>
+ int main(){
+	
+	int n1, n2, n3;
+	n1 = 123;
+	n2 = 456;
+	printf("n1 is %d and n2 is %d \n",n1,n2);
+	
+	// Swaping
+	n3 = n1;
+	n1 = n2;
+	n2 = n3;
+	printf("Now n1 is %d and n2 is %d \n",n1,n2);
+	
+	return 0;
+}
+
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 21 -->
+
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Temperature conversion </span>
+          <span>Program # 21</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Temperature converter fehrenheit to celcius and vice versa , you only need is a formula
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(21)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq21">
+              <code>
+  // Fahrenheit to Celsius vice versa
+
+ #include <stdio.h>
+ int main(){
+	
+	float temperature, F, C;
+	int opt;
+	printf("Choose Conversion : \n");
+	printf("(1) Fahrenheit to Celsius \n");
+	printf("(2) Celsius to Fahrenheit \n");
+	scanf("%d",&opt);
+	
+	if(opt == 1){
+		printf("Enter Fahrenheit Temperature : ");
+		scanf("%f",&F);
+		temperature = 0.556 * (F - 32);
+		printf(" %.2f Fahrenheit into Celsius is %.2f C",F,temperature);
+	}
+	else if(opt == 2){
+		printf("Enter Celsius Temperature : ");
+		scanf("%f",&C);
+		temperature = ((1.8 * C) + 32);
+		printf(" %.2f Celsius into Fahrenheit is %.2f F",C,temperature);
+	}
+	else {
+		printf("Error");
+	}
+	return 0;
+}
+
+              </code>
+          </pre>
+      </div>
+
+<!-- ======================================================== -->
+
+      <!-- Program # 22 -->
+
+      <div class="program-block hidden flex-col p-2 my-4 shadow-xl rounded-md w-3/4 bg-blue-300 hover:transition-all hover:scale-105 ">
+         <p class="flex flex-row justify-between items-center font-bold text-[#212121] max-sm:flex max-sm:flex-col-reverse">
+          <span>Finding out vowel or consonant </span>
+          <span>Program # 22</span>
+         </p>
+
+         <p class="flex flex-col w-full justify-between items-start opacity-80 text-[#212121] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-center">
+          Displaying that the entered value (character) is a vowel or a consonant, use ascii codes if you have to its a fun challenge
+          <button class="flex justify-between items-center w-fit text-sm font-semibold text-gray-500 hover:text-gray-600 hover:cursor-pointer " onclick="toggleFAQ(22)">
+            View code<i class="fa-solid fa-angle-down toggle-icon transition-transform hover:cursor-pointer px-1 mt-0.5"></i>
+           </button>
+          </p>
+
+          <pre class="flex flex-col bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm max-h-0 overflow-hidden transition-all duration-300 ease-in-out mt-2 faq-answer" id="faq22">
+              <code>
+ // Determine Vowel or not
+
+ #include <stdio.h>
+ int main() {
+	/*
+	A E I O U - 65, 69, 73, 79, 85
+	a e i o u - 97, 101, 105, 111, 117
+	*/
+	
+	char vowel;
+	printf("Enter any character : ");
+	scanf("%c",&vowel);
+	if(vowel == 65 || vowel == 97 || vowel == 69 || vowel == 101 || vowel == 73 || vowel == 105 || vowel == 79 || vowel == 111 || vowel == 85 || vowel == 117){
+			printf("Vowel");
+	}
+	else {
+		printf("Consonant");
+	}
+	
+}
+              </code>
+          </pre>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Load More Button -->
+    <button id="loadMoreBtn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+      Load More
+    </button>
+
+    </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const programBlocks = document.querySelectorAll('.program-block');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    let visibleCount = 10;
+    const showCount = 5;
+
+    function showPrograms() {
+      for (let i = 0; i < visibleCount && i < programBlocks.length; i++) {
+        programBlocks[i].classList.remove('hidden');
+      }
+      if (visibleCount >= programBlocks.length) {
+        loadMoreBtn.classList.add('hidden');
+      }
+    }
+
+    loadMoreBtn.addEventListener('click', () => {
+      visibleCount += showCount;
+      showPrograms();
+    });
+
+    // Initial display
+    showPrograms();
+  });
+</script>
+
+
+<script src="https://kit.fontawesome.com/a19de92425.js" crossorigin="anonymous"></script>
+<script>
+        function toggleFAQ(id) {
+            let answer = document.getElementById("faq" + id);
+            let icon = answer.previousElementSibling.querySelector(".toggle-icon");
+    
+            if (answer.style.maxHeight && answer.style.maxHeight !== "0px") {
+                answer.style.maxHeight = "0px";  // Collapse
+                icon.style.transform = "rotate(0deg)"; // Reset icon
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px"; // Expand smoothly
+                icon.style.transform = "rotate(-90deg)"; // Rotate "<" to ">"
+            }
+        }
+</script>
+
+</body>
+</html>
