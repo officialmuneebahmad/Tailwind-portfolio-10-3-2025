@@ -19,8 +19,12 @@ new Typed("#typed", {
         button.classList.add("opacity-0", "pointer-events-none");
         button.classList.remove("opacity-100");
     }
+
 });
 
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+
+

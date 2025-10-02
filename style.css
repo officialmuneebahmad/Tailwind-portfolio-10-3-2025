@@ -19,3 +19,202 @@
 .no-scrollbar::-webkit-scrollbar {
     display: none;  /* Chrome, Safari */
 }
+
+/* TECH STACK ANIMATION A COOL EFFECT */
+ /* Animation keyframes */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes scaleIn {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    @keyframes progressFill {
+        from {
+            width: 0%;
+        }
+    }
+    
+    @keyframes circularFill {
+        from {
+            stroke-dashoffset: 251.2;
+        }
+    }
+
+    /* RESUME DOWNLOAD BTN */
+    /* From Uiverse.io by d3uceY */ 
+.download-btn {
+  height: 45px;
+  width: 95px;
+  cursor: pointer;
+  background: white;
+  border: none;
+  background: #ff0021;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.button-content {
+  transform: translateY(-45px);
+  transition: all 250ms ease-in-out;
+}
+
+.svg-container,
+.text-container {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container .text {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+  opacity: 1;
+  transition: opacity ease-in-out 250ms;
+}
+
+.download-icon {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+  opacity: 0;
+  transition: opacity ease-in-out 250ms;
+}
+
+/* hover state for the button */
+.download-btn:hover .button-content {
+  transform: translateY(0px);
+}
+
+.download-btn:hover .text {
+  opacity: 0;
+}
+
+.download-btn:hover .download-icon {
+  opacity: 1;
+}
+
+.download-btn:focus .download-icon {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* hover state for the button */
+
+    
+    /* Animation classes */
+    .animate-card {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+    }
+    
+    .animate-icon {
+        animation: scaleIn 0.5s ease-out 0.2s forwards;
+        opacity: 0;
+    }
+    
+    .animate-text {
+        animation: fadeInUp 0.5s ease-out 0.3s forwards;
+        opacity: 0;
+    }
+    
+    .animate-progress .bg-green-500 {
+        animation: progressFill 1s ease-out 0.4s forwards;
+    }
+    
+    .animate-circular circle[data-dashoffset] {
+        animation: circularFill 1s ease-out 0.4s forwards;
+    }
+
+  /* 
+  https://uxwing.com/
+  https://www.tech-stack-icons.com/
+  */
+

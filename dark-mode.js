@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggle.addEventListener('click', () => {
         if (isDay) {
-            document.body.style.backgroundColor = '#131314'; // Night color
+            document.body.style.backgroundColor = '#000000'; // Night color
             document.body.style.color = '#ffffff';
             for (var i = 0; i < anchor.length; i++) {
                 anchor[i].style.backgroundColor = "#1b1b1b";
