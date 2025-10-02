@@ -1,27 +1,87 @@
+/* ===== GOOGLE FONTS IMPORTS ===== */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ===== TAILWINDCSS BASE ===== */
 @import "tailwindcss";
 
+/* ===== ROOT ====== */
+:root {
+    --blue-600: #2563eb;
+    --indigo-700: #4338ca;
+}
+
+/* ===== BASE STYLES & TYPOGRAPHY ===== */
 @layer base {
-    h1, h2, h3, strong {
-      font-family: 'Lora', serif;
+    /* Font Family Assignments */
+    h1, h2, h3, h4, h5, h6, strong {
+        font-family: 'Lora', serif;
+        font-weight: 600;
     }
     
-    body, p, span {
-      font-family: 'Poppins', sans-serif;
+    body, p, span, a, button, input, textarea {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
     }
-  }
 
-.no-scrollbar {
-    scrollbar-width: none;  /* Firefox */
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
-.no-scrollbar::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari */
+/* ===== UTILITY CLASSES ===== */
+@layer utilities {
+    /* Gradient Text Effect */
+    .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 200%;
+        animation: gradientShift 3s ease infinite;
+    }
+    /* Sidebar */
+    .custom-gradient {
+    background: linear-gradient(to bottom, var(--blue-600), var(--indigo-700));
+    }
+
+    /* Skill Pill Hover Effects */
+    .skill-pill {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .skill-pill:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px -1px rgba(102, 126, 234, 0.25), 
+                    0 2px 6px -1px rgba(102, 126, 234, 0.15);
+    }
+
+    /* Scrollbar Hiding */
+    .no-scrollbar {
+        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;  /* Chrome, Safari, Opera */
+    }
 }
 
-/* TECH STACK ANIMATION A COOL EFFECT */
- /* Animation keyframes */
+/* ===== ANIMATIONS ===== */
+@layer components {
+    /* Gradient Background Animation */
+    @keyframes gradientShift {
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
+    /* Entry Animations */
     @keyframes fadeInUp {
         from {
             opacity: 0;
@@ -56,140 +116,35 @@
         }
     }
 
-    /* RESUME DOWNLOAD BTN */
-    /* From Uiverse.io by d3uceY */ 
-.download-btn {
-  height: 45px;
-  width: 95px;
-  cursor: pointer;
-  background: white;
-  border: none;
-  background: #ff0021;
-  border-radius: 30px;
-  overflow: hidden;
+    /* Heartbeat Animation */
+    @keyframes heartbeat {
+        from {
+            transform: scale(1);
+            transform-origin: center center;
+            animation-timing-function: ease-out;
+        }
+        10% {
+            transform: scale(0.91);
+            animation-timing-function: ease-in;
+        }
+        17% {
+            transform: scale(0.98);
+            animation-timing-function: ease-out;
+        }
+        33% {
+            transform: scale(0.87);
+            animation-timing-function: ease-in;
+        }
+        45% {
+            transform: scale(1);
+            animation-timing-function: ease-out;
+        }
+    }
 }
 
-.button-content {
-  transform: translateY(-45px);
-  transition: all 250ms ease-in-out;
-}
-
-.svg-container,
-.text-container {
-  height: 45px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-container .text {
-  font-size: 13px;
-  color: #fff;
-  font-weight: 600;
-  opacity: 1;
-  transition: opacity ease-in-out 250ms;
-}
-
-.download-icon {
-  height: 25px;
-  width: 25px;
-  fill: #fff;
-  opacity: 0;
-  transition: opacity ease-in-out 250ms;
-}
-
-/* hover state for the button */
-.download-btn:hover .button-content {
-  transform: translateY(0px);
-}
-
-.download-btn:hover .text {
-  opacity: 0;
-}
-
-.download-btn:hover .download-icon {
-  opacity: 1;
-}
-
-.download-btn:focus .download-icon {
-  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-  animation: heartbeat 1.5s ease-in-out infinite both;
-}
-
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
-
-/* hover state for the button */
-
-    
-    /* Animation classes */
+/* ===== COMPONENT STYLES ===== */
+@layer components {
+    /* Animation Classes */
     .animate-card {
         animation: fadeInUp 0.6s ease-out forwards;
         opacity: 0;
@@ -213,8 +168,156 @@
         animation: circularFill 1s ease-out 0.4s forwards;
     }
 
-  /* 
-  https://uxwing.com/
-  https://www.tech-stack-icons.com/
-  */
+    /* Resume Download Button */
+    .download-btn {
+        height: 45px;
+        width: 95px;
+        cursor: pointer;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 30px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
 
+    .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px -2px rgba(102, 126, 234, 0.4);
+    }
+
+    .button-content {
+        transform: translateY(-45px);
+        transition: all 250ms ease-in-out;
+    }
+
+    .svg-container,
+    .text-container {
+        height: 45px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-container .text {
+        font-size: 13px;
+        color: #fff;
+        font-weight: 600;
+        opacity: 1;
+        transition: opacity ease-in-out 250ms;
+    }
+
+    .download-icon {
+        height: 25px;
+        width: 25px;
+        fill: #fff;
+        opacity: 0;
+        transition: opacity ease-in-out 250ms;
+    }
+
+    /* Button Hover States */
+    .download-btn:hover .button-content {
+        transform: translateY(0px);
+    }
+
+    .download-btn:hover .text {
+        opacity: 0;
+    }
+
+    .download-btn:hover .download-icon {
+        opacity: 1;
+    }
+
+    .download-btn:focus .download-icon {
+        animation: heartbeat 1.5s ease-in-out infinite both;
+    }
+
+    /* Tech Stack Container */
+    .tech-stack-container {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
+    /* Card Components */
+    .feature-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px -10px rgba(102, 126, 234, 0.15);
+        border-color: rgba(102, 126, 234, 0.3);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@layer utilities {
+    @media (max-width: 768px) {
+        .download-btn {
+            width: 85px;
+            height: 40px;
+        }
+        
+        .button-content {
+            transform: translateY(-40px);
+        }
+        
+        .svg-container,
+        .text-container {
+            height: 40px;
+        }
+        
+        .text-container .text {
+            font-size: 12px;
+        }
+        
+        .download-icon {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skill-pill {
+            font-size: 0.875rem;
+            padding: 0.375rem 0.75rem;
+        }
+    }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@layer base {
+    /* Focus styles for better accessibility */
+    button:focus-visible,
+    a:focus-visible {
+        outline: 2px solid #667eea;
+        outline-offset: 2px;
+    }
+
+    /* Reduced motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+        
+        html {
+            scroll-behavior: auto;
+        }
+    }
+}
+
+/* 
+External Resources:
+- Icons: https://uxwing.com/
+- Tech Stack Icons: https://www.tech-stack-icons.com/
+- Fonts: Google Fonts (Lora, Poppins, Inter)
+*/
